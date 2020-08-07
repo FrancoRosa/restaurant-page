@@ -5,6 +5,29 @@
   justify-content: space-between;
 }
 
+.navbar-brand{
+  align-items: center;
+  padding-left: 1em;
+}
+  
+.dish1 {
+  background: url('./joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.dish2 {
+  background: url('./victoria-shes-4acsnIWXm3k-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.dish3 {
+  background: url('./victoria-shes-COYAmXroY1A-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .footer {
   padding: 2rem 1.5rem 2rem;
 }
