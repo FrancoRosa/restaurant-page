@@ -5,11 +5,15 @@
   justify-content: space-between;
 }
 
-.navbar-brand{
+.navbar-brand {
   align-items: center;
   padding-left: 1em;
 }
-  
+ 
+.navbar-end > .button {
+  margin-right: 1em;
+}
+
 .dish1 {
   background: url('./joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg');
   background-repeat: no-repeat;
