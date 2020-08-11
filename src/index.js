@@ -27,9 +27,9 @@ function renderNavbar(container) {
   const aboutButton = navButton('About', '#');
   const contactButton = navButton('Contact', '#');
 
-  // homeButton.onclick(renderHome);
-  // aboutButton.onclick();
-  // contactButton.onclick();
+  homeButton.addEventListener('click', renderHome );
+  aboutButton.addEventListener('click', renderAbout );
+  contactButton.addEventListener('click', renderContact );
 
   itemDiv.appendChild(homeButton);
   itemDiv.appendChild(aboutButton);
@@ -172,9 +172,14 @@ function renderContactSection(container) {
   container.appendChild(section);
 }
 
+function clearContainer() {
+  const contentDiv = document.querySelector('#content');
+  contentDiv.innerHTML = '';
+}
 
 function renderHome() {
   const contentDiv = document.querySelector('#content');
+  clearContainer();
   renderNavbar(contentDiv);
   renderMenuSection(contentDiv);
   renderFooter(contentDiv);
@@ -182,6 +187,7 @@ function renderHome() {
 
 function renderAbout() {
   const contentDiv = document.querySelector('#content');
+  clearContainer();
   renderNavbar(contentDiv);
   renderAboutSection(contentDiv);
   renderFooter(contentDiv);
@@ -189,16 +195,10 @@ function renderAbout() {
 
 function renderContact() {
   const contentDiv = document.querySelector('#content');
+  clearContainer();
   renderNavbar(contentDiv);
   renderContactSection(contentDiv);
   renderFooter(contentDiv);
 }
 
-function clearMainSection() {
-  const sectionCont = document.querySelector('section');
-  sectionCont.remove();
-}
-
-window.onload = () => {
-  renderContact();
-}
+window.onload = () => renderHome();
