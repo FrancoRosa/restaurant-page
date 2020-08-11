@@ -32,6 +32,20 @@
   background-size: 100%;
 }
 
+.lands {
+  background: url('./bbh-singapore-d2hs0gRFCpQ-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.map {
+  background: url('./map.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
 .footer {
   padding: 2rem 1.5rem 2rem;
 }
