@@ -11,9 +11,7 @@ const renderPage = () => {
   renderNavbar(contentDiv);
   contentDiv.appendChild(section);
   renderFooter(contentDiv);
-};
-
-window.onload = () => {
-  renderPage();
   renderMenuSection();
 };
+
+window.onload = () => renderPage();
