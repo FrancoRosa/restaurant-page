@@ -1,4 +1,4 @@
-import { renderMenuSection, renderAboutSection, renderContactSection, clearContainer, renderHome, renderAbout, renderContact } from './renders'
+import { renderMenuSection, renderAboutSection, renderContactSection } from './renders';
 
 const navButton = (text, ref) => {
   const link = document.createElement('a');
@@ -29,9 +29,9 @@ const renderNavbar = (container) => {
   const aboutButton = navButton('About', '#');
   const contactButton = navButton('Contact', '#');
 
-  homeButton.addEventListener('click', renderHome );
-  aboutButton.addEventListener('click', renderAbout );
-  contactButton.addEventListener('click', renderContact );
+  homeButton.addEventListener('click', renderMenuSection);
+  aboutButton.addEventListener('click', renderAboutSection);
+  contactButton.addEventListener('click', renderContactSection);
 
   itemDiv.appendChild(homeButton);
   itemDiv.appendChild(aboutButton);
@@ -40,5 +40,6 @@ const renderNavbar = (container) => {
   menuDiv.appendChild(itemDiv);
   nav.appendChild(menuDiv);
 };
+
 
 export default renderNavbar;
