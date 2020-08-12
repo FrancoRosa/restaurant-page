@@ -29,6 +29,7 @@ const columnContainerArticle = (imageClass, text) => {
   const cardImg = document.createElement('div');
   cardImg.classList = 'card-image';
   const figure = document.createElement('figure');
+
   if (imageClass === 'map') {
     const iframe = document.createElement('iframe');
     iframe.setAttribute('src', 'https://www.google.com/maps/embed?'
