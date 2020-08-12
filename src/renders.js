@@ -49,6 +49,7 @@ const columnContainerArticle = (imageClass, text) => {
   cardCont.classList = 'card-content';
   const divCont = document.createElement('div');
   divCont.innerHTML = text;
+  divCont.classList = 'has-text-centered';
   cardCont.appendChild(divCont);
   card.appendChild(cardCont);
 
@@ -58,8 +59,8 @@ const columnContainerArticle = (imageClass, text) => {
 
 export const renderMenuSection = () => {
   const text1 = 'Breakfast, fresh bread baked at home, with abocado and eggs, accompanied with herbs plus orange juice and coffee.';
-  const text2 = 'Vegetarian lunch with fruits and quail eggs. You can also order any of our delisious soups with cheesse and bread';
-  const text3 = 'Mixed dinner, with pasta and beans or rice, ask for your favorite beverage or wine.';
+  const text2 = 'Vegetarian lunch with fruits and quail eggs. You can also order any of our delicious soups with cheesse and bread.';
+  const text3 = 'Mixed dinner, with pasta and beans or rice, ask for your favorite beverage or wine. You can order in advance.';
 
   const title = document.createElement('h1');
   title.classList = 'title has-text-centered';
@@ -79,10 +80,10 @@ export const renderMenuSection = () => {
 };
 
 export const renderAboutSection = () => {
-  const text1 = 'At Mamá Angélica we grow the products we use on our restaurant,'
-    + 'Angelica was our grantmother and  as she did we take care of the lands that'
-    + 'soround this restaurant oferring the best organic food making our work'
-    + 'susteinable and given our visitors the experience of responsable faming'
+  const text1 = 'At Mamá Angélica we grow the products we use on our restaurant, '
+    + 'Angelica was our grantmother and  as she did we take care of the lands that '
+    + 'soround this restaurant oferring the best organic food making our work '
+    + 'susteinable and given our visitors the experience of responsable farming '
     + 'and nature experience';
 
   const title = document.createElement('h1');
