@@ -1,12 +1,24 @@
 import './bulma.min.css';
 import './style.css';
+import renderFooter from './renderFooter';
+// import renderNavbar from './renderNavbar';
+// import { renderMenuSection, renderAboutSection, renderContactSection, clearContainer, renderHome, renderAbout, renderContact } from './renders'
 import dish1 from './joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg';
 import dish2 from './victoria-shes-4acsnIWXm3k-unsplash.jpg';
 import dish3 from './victoria-shes-COYAmXroY1A-unsplash.jpg';
 import lands from './bbh-singapore-d2hs0gRFCpQ-unsplash.jpg';
 import map from './map.png';
 
-function renderNavbar(container) {
+
+const navButton = (text, ref) => {
+  const link = document.createElement('a');
+  link.textContent = text;
+  link.href = ref;
+  link.classList = 'button is-link is-outlined';
+  return link;
+};
+
+const renderNavbar = (container) => {
   const nav = document.createElement('nav');
   nav.classList = 'navbar is-white';
   const brandDiv = document.createElement('div');
@@ -27,9 +39,9 @@ function renderNavbar(container) {
   const aboutButton = navButton('About', '#');
   const contactButton = navButton('Contact', '#');
 
-  homeButton.addEventListener('click', renderHome );
-  aboutButton.addEventListener('click', renderAbout );
-  contactButton.addEventListener('click', renderContact );
+  homeButton.addEventListener('click', renderMenuSection );
+  aboutButton.addEventListener('click', renderAboutSection );
+  contactButton.addEventListener('click', renderContactSection );
 
   itemDiv.appendChild(homeButton);
   itemDiv.appendChild(aboutButton);
@@ -37,29 +49,23 @@ function renderNavbar(container) {
 
   menuDiv.appendChild(itemDiv);
   nav.appendChild(menuDiv);
-}
+};
 
-function renderFooter(container) {
-  const footer = document.createElement('footer');
-  footer.classList = 'footer';
-  const contentDiv = document.createElement('div');
-  contentDiv.classList = 'content has-text-centered';
-  const textP = document.createElement('p');
-  textP.innerHTML = '<strong>RestaurantPage</strong> by <a href="https://github.com/FrancoRosa">Franco Rosa</a>. 2020</a>. Images from <a href="https://unsplash.com/">Unplash</a>. Main style <strong>Bulmaswatch</strong> by <a href="https://jgog.in/">Jenil Gogari</a>.' 
-  contentDiv.appendChild(textP);
-  footer.appendChild(contentDiv);
-  container.appendChild(footer);
-}
+// const renderFooter = (container) => {
+//   const footer = document.createElement('footer');
+//   footer.classList = 'footer';
+//   const contentDiv = document.createElement('div');
+//   contentDiv.classList = 'content has-text-centered';
+//   const textP = document.createElement('p');
+//   textP.innerHTML = '<strong>RestaurantPage</strong> by <a href="https://github.com/FrancoRosa">'
+//     + 'Franco Rosa</a>. 2020</a>. Images from <a href="https://unsplash.com/">Unplash</a>.'
+//     + ' Main style <strong>Bulmaswatch</strong> by <a href="https://jgog.in/">Jenil Gogari</a>.' 
+//   contentDiv.appendChild(textP);
+//   footer.appendChild(contentDiv);
+//   container.appendChild(footer);
+// };
 
-function navButton(text, ref) {
-  const link = document.createElement('a');
-  link.textContent = text;
-  link.href = ref;
-  link.classList = "button is-link is-outlined";
-  return link;
-}
-
-function columnContainer(imageClass, text) {
+const columnContainer = (imageClass, text) => {
   const columnDiv = document.createElement('div');
   columnDiv.classList = 'column is-one-quarter';
   const card = document.createElement('div');
@@ -80,9 +86,9 @@ function columnContainer(imageClass, text) {
 
   columnDiv.appendChild(card);
   return columnDiv;
-}
+};
 
-function columnContainerArticle(imageClass, text) {
+const columnContainerArticle = (imageClass, text) => {
   const columnDiv = document.createElement('div');
   columnDiv.classList = 'column is-10';
   const card = document.createElement('div');
@@ -90,8 +96,19 @@ function columnContainerArticle(imageClass, text) {
   const cardImg = document.createElement('div');
   cardImg.classList = 'card-image';
   const figure = document.createElement('figure');
-  figure.classList = 'image is-3by1 '.concat(imageClass);
-  cardImg.appendChild(figure);
+  if (imageClass === 'map') {
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', 'https://www.google.com/maps/embed?'
+    + 'pb=!1m18!1m12!1m3!1d3885.2136213304607!2d-72.54211758545479'
+    + '!3d-13.148921090739716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1'
+    + '3.1!3m3!1m2!1s0x916d9ba8123790bd%3A0x691e56d7c1a6d1c1!2sMama'
+    + '%20Ang%C3%A9lica!5e0!3m2!1sen!2spe!4v1597171286742!5m2!1sen!2spe');
+    cardImg.appendChild(iframe);
+  } else {
+    figure.classList = 'image is-3by1 '.concat(imageClass);
+    cardImg.appendChild(figure);
+  }
+
   card.appendChild(cardImg);
 
   const cardCont = document.createElement('div');
@@ -103,33 +120,31 @@ function columnContainerArticle(imageClass, text) {
 
   columnDiv.appendChild(card);
   return columnDiv;
-}
+};
 
+const renderMenuSection = () =>{
+  const text1 = 'Breakfast, fresh bread baked at home, with abocado and eggs, accompanied with herbs plus orange juice and coffee.';
+  const text2 = 'Vegetarian lunch with fruits and quail eggs. You can also order any of our delisious soups with cheesse and bread';
+  const text3 = 'Mixed dinner, with pasta and beans or rice, ask for your favorite beverage or wine.';
 
-function renderMenuSection(container) {
-  const text1 = 'Lorem ipsum dolor sit amet, real <a>@bulmaio</a>.';
-  const text2 = 'Lorem ipsum dolor sit amet, real <a>@bulmaio</a>.';
-  const text3 = 'Lorem ipsum dolor sit amet, real <a>@bulmaio</a>.';
-  
   const title = document.createElement('h1');
   title.classList = 'title has-text-centered';
   title.textContent = 'This is our menu';
-  
+
   const columnsDiv = document.createElement('div');
   columnsDiv.classList = 'columns is-centered';
-  
+
   columnsDiv.appendChild(columnContainer('dish1', text1));
   columnsDiv.appendChild(columnContainer('dish2', text2));
   columnsDiv.appendChild(columnContainer('dish3', text3));
 
-  const section = document.createElement('section');
+  const section = document.querySelector('section');
+  section.innerHTML = '';
   section.appendChild(title);
   section.appendChild(columnsDiv);
-  
-  container.appendChild(section);
-}
+};
 
-function renderAboutSection(container) {
+const renderAboutSection = () => {
   const text1 = 'At Mamá Angélica we grow the products we use on our restaurant,'
     + 'Angelica was our grantmother and  as she did we take care of the lands that'
     + 'soround this restaurant oferring the best organic food making our work'
@@ -145,16 +160,16 @@ function renderAboutSection(container) {
   
   columnsDiv.append(columnContainerArticle("lands", text1))
 
-  const section = document.createElement('section');
+  const section = document.querySelector('section');
+  section.innerHTML = '';
   section.appendChild(title);
   section.appendChild(columnsDiv);
-  
-  container.appendChild(section);
-}
+};
 
-function renderContactSection(container) {
-  const text1 = 'We are at km115 traintrack to Hidrolectrica, it is an hour walk from aguas calientes '
-    + 'call us +51 984894723 or write to serviciosmandor@gmail.com' 
+const renderContactSection = () => {
+  const text1 = 'We are at the traintrack to Hidrolectrica KM115, it'
+    + ' is an hour walk from Aguas Calientes (Ask your nearest train station for available departures)'
+    + ' call us +51 984894723 or write an email to: serviciosmandor@gmail.com';
   
   const title = document.createElement('h1');
   title.classList = 'title has-text-centered';
@@ -163,42 +178,24 @@ function renderContactSection(container) {
   const columnsDiv = document.createElement('div');
   columnsDiv.classList = 'columns is-centered';
   
-  columnsDiv.append(columnContainerArticle("map", text1));
+  columnsDiv.append(columnContainerArticle('map', text1));
 
-  const section = document.createElement('section');
+  const section = document.querySelector('section');
+  section.innerHTML = '';
   section.appendChild(title);
   section.appendChild(columnsDiv);
-  
-  container.appendChild(section);
-}
+};
 
-function clearContainer() {
+const renderPage = () => {
   const contentDiv = document.querySelector('#content');
-  contentDiv.innerHTML = '';
-}
+  const section = document.createElement('section');
 
-function renderHome() {
-  const contentDiv = document.querySelector('#content');
-  clearContainer();
   renderNavbar(contentDiv);
-  renderMenuSection(contentDiv);
+  contentDiv.appendChild(section);
   renderFooter(contentDiv);
-}
+};
 
-function renderAbout() {
-  const contentDiv = document.querySelector('#content');
-  clearContainer();
-  renderNavbar(contentDiv);
-  renderAboutSection(contentDiv);
-  renderFooter(contentDiv);
-}
-
-function renderContact() {
-  const contentDiv = document.querySelector('#content');
-  clearContainer();
-  renderNavbar(contentDiv);
-  renderContactSection(contentDiv);
-  renderFooter(contentDiv);
-}
-
-window.onload = () => renderHome();
+window.onload = () => {
+  renderPage();
+  renderMenuSection()
+};
