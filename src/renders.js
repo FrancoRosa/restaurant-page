@@ -1,4 +1,4 @@
-const columnContainer = (imageClass, text) => {
+export const columnContainer = (imageClass, text) => {
   const columnDiv = document.createElement('div');
   columnDiv.classList = 'column is-one-quarter';
   const card = document.createElement('div');
@@ -21,7 +21,7 @@ const columnContainer = (imageClass, text) => {
   return columnDiv;
 };
 
-const columnContainerArticle = (imageClass, text) => {
+export const columnContainerArticle = (imageClass, text) => {
   const columnDiv = document.createElement('div');
   columnDiv.classList = 'column is-10';
   const card = document.createElement('div');
@@ -55,68 +55,4 @@ const columnContainerArticle = (imageClass, text) => {
 
   columnDiv.appendChild(card);
   return columnDiv;
-};
-
-export const renderMenuSection = () => {
-  const text1 = 'Breakfast, fresh bread baked at home, with abocado and eggs, accompanied with herbs plus orange juice and coffee.';
-  const text2 = 'Vegetarian lunch with fruits and quail eggs. You can also order any of our delicious soups with cheesse and bread.';
-  const text3 = 'Mixed dinner, with pasta and beans or rice, ask for your favorite beverage or wine. You can order in advance.';
-
-  const title = document.createElement('h1');
-  title.classList = 'title has-text-centered';
-  title.textContent = 'This is our menu';
-
-  const columnsDiv = document.createElement('div');
-  columnsDiv.classList = 'columns is-centered';
-
-  columnsDiv.appendChild(columnContainer('dish1', text1));
-  columnsDiv.appendChild(columnContainer('dish2', text2));
-  columnsDiv.appendChild(columnContainer('dish3', text3));
-
-  const section = document.querySelector('section');
-  section.innerHTML = '';
-  section.appendChild(title);
-  section.appendChild(columnsDiv);
-};
-
-export const renderAboutSection = () => {
-  const text1 = 'At Mamá Angélica we grow the products we use on our restaurant, '
-    + 'Angelica was our grantmother and  as she did we take care of the lands that '
-    + 'soround this restaurant oferring the best organic food making our work '
-    + 'susteinable and given our visitors the experience of responsable farming '
-    + 'and nature experience';
-
-  const title = document.createElement('h1');
-  title.classList = 'title has-text-centered';
-  title.textContent = 'Our story';
-
-  const columnsDiv = document.createElement('div');
-  columnsDiv.classList = 'columns is-centered';
-
-  columnsDiv.append(columnContainerArticle('lands', text1));
-
-  const section = document.querySelector('section');
-  section.innerHTML = '';
-  section.appendChild(title);
-  section.appendChild(columnsDiv);
-};
-
-export const renderContactSection = () => {
-  const text1 = 'We are at the traintrack to Hidrolectrica KM115, it'
-    + ' is an hour walk from Aguas Calientes (Ask your nearest train station for available departures)'
-    + ' call us +51 984894723 or write an email to: serviciosmandor@gmail.com';
-
-  const title = document.createElement('h1');
-  title.classList = 'title has-text-centered';
-  title.textContent = 'Visit us';
-
-  const columnsDiv = document.createElement('div');
-  columnsDiv.classList = 'columns is-centered';
-
-  columnsDiv.append(columnContainerArticle('map', text1));
-
-  const section = document.querySelector('section');
-  section.innerHTML = '';
-  section.appendChild(title);
-  section.appendChild(columnsDiv);
 };

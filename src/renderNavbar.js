@@ -1,4 +1,6 @@
-import { renderMenuSection, renderAboutSection, renderContactSection } from './renders';
+import renderMenuSection from './renderHome';
+import renderAboutSection from './renderAbout';
+import renderContactSection from './renderContact';
 
 const navButton = (text) => {
   const link = document.createElement('a');
