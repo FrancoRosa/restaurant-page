@@ -10,7 +10,7 @@ const renderMenuSection = () => {
   title.textContent = 'This is our menu';
 
   const columnsDiv = document.createElement('div');
-  columnsDiv.classList = 'columns is-centered';
+  columnsDiv.classList = 'columns is-centered is-mobile';
 
   columnsDiv.appendChild(columnContainer('dish1', text1));
   columnsDiv.appendChild(columnContainer('dish2', text2));

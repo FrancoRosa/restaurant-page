@@ -1,7 +1,7 @@
 const navButton = (text) => {
   const link = document.createElement('a');
   link.textContent = text;
-  link.classList = 'is-outlined navbar-item';
+  link.classList = 'button is-link is-outlined';
   return link;
 };
 

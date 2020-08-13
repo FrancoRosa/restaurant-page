@@ -1,6 +1,6 @@
 export const columnContainer = (imageClass, text) => {
   const columnDiv = document.createElement('div');
-  columnDiv.classList = 'column is-one-quarter';
+  columnDiv.classList = 'column is-one-quarter is-half-mobile';
   const card = document.createElement('div');
   card.classList = 'card';
   const cardImg = document.createElement('div');

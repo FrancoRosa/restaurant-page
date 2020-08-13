@@ -10,8 +10,12 @@
   padding: 1em;
 }
 
-.navbar-end > a {
-  margin-right: 1em;
+.navbar-end > .button {
+  margin: 1em;
+}
+
+.card-content {
+  padding: 0.5rem;
 }
 
 .dish1 {
