@@ -9,7 +9,7 @@ Although. This project is from [The Odin Project](https://www.theodinproject.com
 I will feel honored if you try my app and tell me how to improve it.
 it is hosted on a Netlify Free account so be patient, sometimes it takes a while to load.
 [restaurant-page](https://mama-angelica.netlify.com)
-![mama-angelica](./src/screenshot.png)
+![mama-angelica](./src/images/screenshot.png)
 
 ## Built With
 
