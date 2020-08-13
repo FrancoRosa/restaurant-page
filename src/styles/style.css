@@ -15,25 +15,25 @@
 }
 
 .dish1 {
-  background: url('./joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg');
+  background: url('../images/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .dish2 {
-  background: url('./victoria-shes-4acsnIWXm3k-unsplash.jpg');
+  background: url('../images/victoria-shes-4acsnIWXm3k-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .dish3 {
-  background: url('./victoria-shes-COYAmXroY1A-unsplash.jpg');
+  background: url('../images/victoria-shes-COYAmXroY1A-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .lands {
-  background: url('./bbh-singapore-d2hs0gRFCpQ-unsplash.jpg');
+  background: url('../images/bbh-singapore-d2hs0gRFCpQ-unsplash.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;

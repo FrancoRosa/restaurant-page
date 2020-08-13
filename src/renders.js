@@ -28,7 +28,6 @@ export const columnContainerArticle = (imageClass, text) => {
   card.classList = 'card';
   const cardImg = document.createElement('div');
   cardImg.classList = 'card-image';
-  const figure = document.createElement('figure');
 
   if (imageClass === 'map') {
     const iframe = document.createElement('iframe');
@@ -39,6 +38,7 @@ export const columnContainerArticle = (imageClass, text) => {
     + '%20Ang%C3%A9lica!5e0!3m2!1sen!2spe!4v1597171286742!5m2!1sen!2spe');
     cardImg.appendChild(iframe);
   } else {
+    const figure = document.createElement('figure');
     figure.classList = 'image is-3by1 '.concat(imageClass);
     cardImg.appendChild(figure);
   }

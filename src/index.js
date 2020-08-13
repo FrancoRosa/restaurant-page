@@ -1,5 +1,5 @@
-import './bulma.min.css';
-import './style.css';
+import './styles/bulma.min.css';
+import './styles/style.css';
 import renderFooter from './renderFooter';
 import renderNavbar from './renderNavbar';
 import renderMenuSection from './renderHome';
