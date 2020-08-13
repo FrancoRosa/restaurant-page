@@ -6,7 +6,7 @@ import renderMenuSection from './renderHome';
 import renderAboutSection from './renderAbout';
 import renderContactSection from './renderContact';
 
-const addTabNavigation = () =>{
+const addTabNavigation = () => {
   const navButtons = document.querySelectorAll('.is-outlined');
   navButtons[0].addEventListener('click', renderMenuSection);
   navButtons[1].addEventListener('click', renderAboutSection);
