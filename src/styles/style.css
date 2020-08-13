@@ -7,10 +7,10 @@
 
 .navbar-brand {
   align-items: center;
-  padding-left: 1em;
+  padding: 1em;
 }
 
-.navbar-end > .button {
+.navbar-end > a {
   margin-right: 1em;
 }
 

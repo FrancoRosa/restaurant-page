@@ -3,6 +3,15 @@ import './styles/style.css';
 import renderFooter from './renderFooter';
 import renderNavbar from './renderNavbar';
 import renderMenuSection from './renderHome';
+import renderAboutSection from './renderAbout';
+import renderContactSection from './renderContact';
+
+const addTabNavigation = () =>{
+  const navButtons = document.querySelectorAll('.is-outlined');
+  navButtons[0].addEventListener('click', renderMenuSection);
+  navButtons[1].addEventListener('click', renderAboutSection);
+  navButtons[2].addEventListener('click', renderContactSection);
+};
 
 const renderPage = () => {
   const contentDiv = document.querySelector('#content');
@@ -14,4 +23,7 @@ const renderPage = () => {
   renderMenuSection();
 };
 
-window.onload = () => renderPage();
+window.onload = () => {
+  renderPage();
+  addTabNavigation();
+};
