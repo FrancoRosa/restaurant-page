@@ -1,0 +1,53 @@
+#content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  align-items: center;
+  padding: 1em;
+}
+
+.navbar-end > .button {
+  margin: 1em;
+}
+
+.card-content {
+  padding: 0.5rem;
+}
+
+.dish1 {
+  background: url('../images/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.dish2 {
+  background: url('../images/victoria-shes-4acsnIWXm3k-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.dish3 {
+  background: url('../images/victoria-shes-COYAmXroY1A-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.lands {
+  background: url('../images/bbh-singapore-d2hs0gRFCpQ-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 50vh;
+}
+
+.footer {
+  padding: 2rem 1.5rem 2rem;
+}
